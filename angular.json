@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angularForms"
+    }
+  },
+  "defaultProject": "angularForms",
+  "cli": {
+    "analytics": "0f9e6b1c-f418-4de0-8f12-bb10674b5e76"
+  }
 }
