@@ -26,4 +26,11 @@ export class AppComponent {
     this.email = this.contactForm.get('email').value;
     this.password = this.contactForm.get('password').value;
   }
+  input2;
+  input21;
+  input22;
+  input3;
+  input31;
+  input4;
+  input41;
 }

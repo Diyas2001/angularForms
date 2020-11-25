@@ -1,8 +1,7 @@
 <br>
-<h1 style="text-align: center">Modal Driven Form</h1>
+<h1 style="text-align: center">Modal-Driven Form</h1>
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div class="container">
-
   <div class="form-group">
     <label for="inputAddress">Name</label>
     <input formControlName="name" type="text" class="form-control" id="inputAddress">
@@ -24,25 +23,67 @@
   <button type="submit" value="submit" class="btn btn-primary">Submit</button>
     <br>
     <br>
-<ol>
-  <li> Name: {{name}}</li>
-  <li> Surname: {{surname}}</li>
-  <li> Email: {{email}}</li>
-  <li> Password: {{password}}</li>
-</ol>
+  <ol>
+     <li> Name: {{name}}</li>
+     <li> Surname: {{surname}}</li>
+    <li> Email: {{email}}</li>
+   <li> Password: {{password}}</li>
+  </ol>
   </div>
 </form>
 <br><br>
-<h1 style="text-align: center">Template Driven Form</h1>
+<h1 style="text-align: center">Template-Driven Form</h1>
 <div class="container">
-  <form>
-    <form></form>
-    <form></form>
-    <form>
-      <form></form>
+  <form class="f" style="border: 1px solid black; padding: 10px; background-color: darkgrey" #form1="ngForm">
+    <label>Form-1 validity is: <span>{{form1.valid}}</span></label>
+   <form  style="border: 1px solid black; padding: 10px; background-color: aquamarine" #form2="ngForm">
+     <label>Form 2 validity is: <span>{{form2.dirty}}</span></label>
+     <br>
+     <input style="background-color: cyan" type="text"  name="form2"  [(ngModel)]="input2">
+     <br><br>
+    <form style="border: 1px solid black; padding: 10px; background-color: lightblue" #form21="ngForm">
+      <label>Form 2.1 validity is: <span>{{form21.dirty}}</span></label>
+      <br>
+      <input style="background-color: cyan" type="text"  name="form21"  [(ngModel)]="input21">
+
     </form>
-    <form>
-      <form></form>
+     <br>
+    <form style="border: 1px solid black; padding: 10px; background-color: lightblue" #form22="ngForm">
+      <label>Form 2.2 validity is: <span>{{form22.dirty}}</span></label>
+      <br>
+      <input style="background-color: cyan" type="text"  name="form22"  [(ngModel)]="input22">
     </form>
+     <h3>Toggle Reactive Form</h3>
+    <form style="border: 1px solid black; padding: 10px ; background-color: lightblue" #form3="ngForm">
+      <h4>Reactive form</h4>
+      <label>Form 3 validity is: <span>{{form3.dirty}}</span></label>
+      <br>
+      <input style="background-color: cyan" type="text"  name="form3"  [(ngModel)]="input3">
+      <br>
+      <br>
+      <form style="border: 1px solid black; padding: 10px; background-color: darkcyan" #form31="ngForm">
+        <label>Form 3.1 validity is: <span>{{form31.dirty}}</span></label>
+        <br>
+        <input style="background-color: cyan" type="text"  name="form31"  [(ngModel)]="input31">
+      </form>
+    </form>
+     <br>
+    <form style="border: 1px solid black; padding: 10px; background-color: lightblue" #form4="ngForm">
+      <h4>Isolated form</h4>
+      <label>Form 4 validity is: <span>{{form4.dirty}}</span></label>
+      <br>
+      <input style="background-color: cyan" type="text"  name="form4"  [(ngModel)]="input4">
+      <br>
+      <br>
+      <form style="border: 1px solid black; padding: 10px; background-color: darkcyan" #form41="ngForm">
+        <label>Form 4.1 validity is: <span>{{form41.dirty}}</span></label>
+        <br>
+        <input style="background-color: cyan" type="text"  name="form41"  [(ngModel)]="input41">
+      </form>
+    </form>
+
+   </form>
   </form>
+  <br>
+  <br>
 </div>
